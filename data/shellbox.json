@@ -1,0 +1,17 @@
+{
+    "dadosAbastecimento": {
+        "latitude": "-7.963273",
+        "longitude": "-34.8458601",
+        "boxCode": "766601",
+        "bin": "412177",
+        "finalCartao": "9132",
+        "flagTitular": "S",
+        "telemetriaAtiva": true
+    },
+    "dadosAutorizacao": {
+        "fuellingId": [
+            "629d9f45-8beb-46c3-9678-37b6b474073b"
+        ],
+        "produtoTelemetria": "true"
+    }
+}
