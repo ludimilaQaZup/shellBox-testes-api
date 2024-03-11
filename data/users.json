@@ -1,1 +1,22 @@
-{"jwtToken": ["eyJraWQiOiJjY3RcL2I1K0twZ2V4Qk5sNGFEcUxFU0JhbVRSRkJ3TWJhcng3dlpVMFwvVU09IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiIwMmRjYzk0YS03ZjhhLTRlN2EtYWE2YS02YjMyNzI5NjZhYTAiLCJldmVudF9pZCI6IjAzZTUxMDYwLTAyZDctNDM4OS04NDgyLWNiOWVmMDg5ZjRmYyIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE3MDk4MzYyNTYsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX1RacldWUzhUWiIsImV4cCI6MTcwOTgzOTg1NiwiaWF0IjoxNzA5ODM2MjU2LCJqdGkiOiI4YmYzYzFhMC1lMTBhLTQ0MmMtYWQyZC1hY2ZhMjkwMjU1OGIiLCJjbGllbnRfaWQiOiIzMDhzMWdhbmZpMWwzYW5kYzkwdnIxMWE3cyIsInVzZXJuYW1lIjoiNDI0MjAxMjQwMzAifQ.WlciVuohxjI8tJRCmQNrMpvnkxkctgqYl_6RKyRHjEpravaIKT3OWtD9fRp8DXsLt70b1B3CaqWlWeNe5g37IXZxJsu75BRjXht6eTPQWX_2M1oeYkMgEuNjXYiXm0kyHAcDscHYJiyaxbyjBPz2-iP-LJxLlEPMyB4uRLDQJnPp20bhsNBtahIyX6C5kHdU7JtJrMX0x-Nt__MlAJA_o6pgcivdYLQSMCI5j2VL9HH-tHwP4WnPrSZCQU4eaSvCPxvw3nBRWSWPJrQTqAM3cxj90bm6keDATSXXXSq8Q_KQzEkxQ0bVDc9TumXAY4WmEehJbQb7sIgdJSuzHIIy4w"], "environment": "hml", "users": [{"username": "42420124030", "password": "senha123"}, {"username": "12815494019", "password": "senha123"}, {"username": "78505912756", "password": "senha123"}, {"username": "78505912756", "password": "senha123"}]}
+{
+    "jwtToken": "",
+    "environment": "hml",
+    "users": [
+        {
+            "username": "42420124030",
+            "password": "senha123"
+        },
+        {
+            "username": "12815494019",
+            "password": "senha123"
+        },
+        {
+            "username": "78505912756",
+            "password": "senha123"
+        },
+        {
+            "username": "78505912756",
+            "password": "senha123"
+        }
+    ]
+}
