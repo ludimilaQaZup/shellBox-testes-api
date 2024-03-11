@@ -1,22 +1,4 @@
 {
     "jwtToken": "",
-    "environment": "hml",
-    "users": [
-        {
-            "username": "42420124030",
-            "password": "senha123"
-        },
-        {
-            "username": "12815494019",
-            "password": "senha123"
-        },
-        {
-            "username": "78505912756",
-            "password": "senha123"
-        },
-        {
-            "username": "78505912756",
-            "password": "senha123"
-        }
-    ]
+    "environment": "hml"
 }

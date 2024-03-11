@@ -25,7 +25,7 @@ solicito abastecimento
 #Pegar Token
     # ${users_json}    Load Json From File    ${users_file}
     ${json}    Get Json Value    file_name=users
-    ${token}    Set Variable    ${json['jwtToken'][0]}
+    ${token}    Set Variable    ${json['jwtToken']}
     Set Suite Variable    ${token}
 
 #Solicitar abastecimento
@@ -58,7 +58,8 @@ a resposta for 200
 
 o campo fuellinId deverá vir preenchido
     ${response_json}    Convert String To Json    ${RESPONSE.content}
-    ${fuellingId}    Get Value From Json    ${response_json}    $.dados.fuellingId
+
+    Set Global Variable    ${fuellingId}    ${response.json()['dados']['fuellingId']}
     Should Not Be Empty    ${fuellingId}
     Set Json Value  file_name=shellbox   key=fuellingId    value=${fuellingId}
 
@@ -70,7 +71,7 @@ informo o fuellingId correto
 
 #Pegar token
     ${json}    Get Json Value    file_name=users
-    ${token}    Set Variable    ${json['jwtToken'][0]}
+    ${token}    Set Variable    ${json['jwtToken']}
     Set Suite Variable    ${token}
 
 #Autorizar abastecimento
@@ -78,7 +79,7 @@ informo o fuellingId correto
 
 # Criar um novo objeto JSON com os campos obrigatórios
     ${json_body}    Create Dictionary    
-    ...    fuellingId=${json_autorizar_abastecimento['dadosAutorizacao']['fuellingId'][0]}    
+    ...    fuellingId=${json_autorizar_abastecimento['dadosAutorizacao']['fuellingId']}    
     ...    produtoTelemetria=${json_autorizar_abastecimento['dadosAutorizacao']['produtoTelemetria']}
 
     # Converter o dicionário para uma string JSON usando json.dumps
