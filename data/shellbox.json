@@ -9,9 +9,7 @@
         "telemetriaAtiva": true
     },
     "dadosAutorizacao": {
-        "fuellingId": [
-            "629d9f45-8beb-46c3-9678-37b6b474073b"
-        ],
+        "fuellingId": "dbc116b3-0362-4878-9703-8a042da4ea15",
         "produtoTelemetria": "true"
     }
 }
