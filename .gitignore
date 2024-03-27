@@ -6,3 +6,4 @@ results
 *.xml
 .vscode
 data/**
+*.yaml
