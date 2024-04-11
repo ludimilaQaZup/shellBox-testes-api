@@ -1,0 +1,15 @@
+CONFIGS:
+  environment: hml
+  dominios:
+      login: http://localhost:3000
+      bff: https://apihml.digitalportoseguro.com.br
+  
+  paths:
+      geral: cliente/v1/abastecimento/shellbox/
+      validar_codigo: validar/abastecimento
+      autorizar_abastecimento: autorizar/abastecimento
+      buscar_cartao: cliente/v3/cartoes/home
+
+  usuarios:
+      cpf: 
+      senha: 
