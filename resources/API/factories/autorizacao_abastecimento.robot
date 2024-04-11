@@ -8,6 +8,9 @@ Library          Process
 Library          OperatingSystem
 Library          ../resources/API/factories/abastecimento.py
 Resource         ../resources/API/factories/login_aws_hml.robot
+Resource         ../resources/commons.robot
+
+Variables        ../resources/API/factories/abastecimento.py
 
 *** Keywords ***
 Criar sessão para autorizar o abastecimento
@@ -17,20 +20,21 @@ Criar sessão para autorizar o abastecimento
     ...    Authorization=Bearer ${TOKEN_AUTH_HML}
     Create Session   
     ...    alias=autorizarAbastecimento
-    ...    url=https://apihml.digitalportoseguro.com.br
+    ...    url=${CONFIGS.dominios.bff}
     ...    headers=${headers}
     
 Inserir um fuellingID válido
-    ${body}        Create Dictionary    
-    ...    fuellingId=${FUELLING_ID}   
-    ...    produtoTelemetria='true'
+    ${json}    Pegar Valor JSON    file_name=${arquivo_json}
+    ${body}    Create Dictionary    
+    ...    fuellingId=${json['fuellingId']}   
+    ...    produtoTelemetria=true
 
     Criar sessão para autorizar o abastecimento
-    
+    ${url_autorizar_abastecimento}    Catenate    SEPARATOR=    ${CONFIGS.paths.geral}    ${CONFIGS.paths.autorizar_abastecimento}
     ${resposta}    POST On Session
-    ...    alias=validarCodigoBomba
-    ...    url=/cliente/v1/abastecimento/shellbox/autorizar/abastecimento
+    ...    alias=autorizarAbastecimento
+    ...    url=${url_autorizar_abastecimento}
     ...    json=${body}
-
-    Log    ${resposta.json()}    
+       
     Status Should Be    204
+    Remove File    path=${diretorio_arquivo}/${arquivo_json}

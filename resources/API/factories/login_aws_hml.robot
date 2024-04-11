@@ -4,11 +4,13 @@ Library    RequestsLibrary
 Library    Collections
 Library    JSONLibrary
 
+Variables    ../config.yaml
+
 *** Variables ***
-${URL_API}    http://localhost:3000/signin
-${USER}       47564734825
-${PASSWORD}    senha123
-${ENV}    hml
+${URL_API}    ${CONFIGS.dominios.login}
+${USER}       ${CONFIGS.usuarios.cpf}
+${PASSWORD}   ${CONFIGS.usuarios.senha}
+${ENV}        ${CONFIGS.environment}
 
 *** Keywords ***
 #Antes deve-se iniciar projeto no amplify (npm run start-hml)
@@ -19,7 +21,7 @@ Autenticar na AWS
 
     ${response}    GET On Session    
     ...    alias=auth_api    
-    ...    url=?password=${PASSWORD}&environment=${ENV}&username=${USER}    
+    ...    url=signin?password=${PASSWORD}&environment=${ENV}&username=${USER}    
     ...    expected_status=200
 
     Set Global Variable    ${TOKEN_AUTH_HML}    

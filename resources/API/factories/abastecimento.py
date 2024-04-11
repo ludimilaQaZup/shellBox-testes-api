@@ -3,11 +3,13 @@ import os
 import json
 
 
-arquivo_json = "dados_cartao.json"
+arquivo_json = "payload_abastecimento.json"
 diretorio_arquivo = "data"
 
-""" verifica_arquivo_dados_cartao
-Função que verifica a existência do diretório data e do arquivo dados_cartao"""
+"""
+verifica_arquivo_dados_cartao()
+Função que verifica a existência do diretório data e do arquivo payload_abastecimento
+"""
 
 
 def verifica_arquivo_dados_cartao():
@@ -29,17 +31,21 @@ def verifica_arquivo_dados_cartao():
             'bin': '',
             'finalCartao': '',
             'flagTitular': '',
-            'telemetriaAtivo': False
+            'telemetriaAtiva': False,
+            'statusBloqueio': ''
         }
         with open(caminho_arquivo, 'w') as f:
             json.dump(dados, f, indent=4)
         print(f"Arquivo {nome_arquivo} criado no diretório {diretorio}.")
     else:
+        factory_abastecimento_validacao_token()
         print(f"Arquivo {nome_arquivo} já existe no diretório {diretorio}.")
 
 
-""" ler_dados_cartao
-Função que pega os dados do cartão do usuario logado"""
+"""
+ler_dados_cartao()
+Função que pega os dados do cartão do usuario logado
+"""
 
 
 def ler_dados_cartao():
@@ -53,20 +59,21 @@ def ler_dados_cartao():
     return dados
 
 
-""" factory_abastecimento_validacao_token
+"""
+factory_abastecimento_validacao_token()
 Função que envia os dados para a request de validação da bomba
 """
 
 
 def factory_abastecimento_validacao_token():
-    dados_cartao = ler_dados_cartao()
+    payload_abastecimento = ler_dados_cartao()
     abastecimento = {
         "latitude": "-7.963273",
         "longitude": "-34.8458601",
         "boxCode": "766601",
-        "bin": dados_cartao["bin"],
-        "finalCartao": dados_cartao["finalCartao"],
-        "flagTitular": dados_cartao["flagTitular"],
-        "telemetriaAtivo": dados_cartao["telemetriaAtivo"],
+        "bin": payload_abastecimento["bin"],
+        "finalCartao": payload_abastecimento["finalCartao"],
+        "flagTitular": payload_abastecimento["flagTitular"],
+        "telemetriaAtiva": payload_abastecimento["telemetriaAtiva"],
     }
     return abastecimento
