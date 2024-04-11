@@ -8,9 +8,10 @@ Library          Process
 Library          OperatingSystem
 Library          ../resources/API/factories/abastecimento.py
 Resource         ../resources/API/factories/login_aws_hml.robot
-Resource         ../resources/commons.robot
+Resource         ../resources/API/commons.robot
 
 Variables        ../resources/API/factories/abastecimento.py
+
 
 *** Keywords ***
 Criar sessão para autorizar o abastecimento

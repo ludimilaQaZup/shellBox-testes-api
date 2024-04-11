@@ -6,6 +6,7 @@ Library    OperatingSystem
 Library    JSONLibrary
 
 Resource    ../resources/API/factories/login_aws_hml.robot
+Variables        ../config.yaml
 
 *** Keywords ***  
 
