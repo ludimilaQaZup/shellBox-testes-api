@@ -9,7 +9,3 @@ CONFIGS:
       validar_codigo: validar/abastecimento
       autorizar_abastecimento: autorizar/abastecimento
       buscar_cartao: cliente/v3/cartoes/home
-
-  usuarios:
-      cpf: 
-      senha: 

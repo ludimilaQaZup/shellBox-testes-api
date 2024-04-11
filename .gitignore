@@ -6,5 +6,5 @@ results
 *.xml
 .vscode
 data/**
-config.yaml
+massas.yaml
 *.env

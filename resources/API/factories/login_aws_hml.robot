@@ -5,11 +5,12 @@ Library    Collections
 Library    JSONLibrary
 
 Variables    ../config.yaml
+Variables    ../massas.yaml
 
 *** Variables ***
 ${URL_API}    ${CONFIGS.dominios.login}
-${USER}       ${CONFIGS.usuarios.cpf}
-${PASSWORD}   ${CONFIGS.usuarios.senha}
+${USER}       ${USUARIOS.usuario.cpf}
+${PASSWORD}   ${USUARIOS.usuario.senha}
 ${ENV}        ${CONFIGS.environment}
 
 *** Keywords ***
