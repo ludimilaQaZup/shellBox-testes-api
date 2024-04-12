@@ -32,7 +32,8 @@ def verifica_arquivo_dados_cartao():
             'finalCartao': '',
             'flagTitular': '',
             'telemetriaAtiva': False,
-            'statusBloqueio': ''
+            'statusBloqueio': '',
+            'fuellingId': ''
         }
         with open(caminho_arquivo, 'w') as f:
             json.dump(dados, f, indent=4)
