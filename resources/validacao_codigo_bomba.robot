@@ -52,10 +52,8 @@ Inserir um código de abastecimento válido
     ...    url=${url_validar_codigo_bomba}
     ...    json=${body}
 
-    # Set Global Variable    ${FUELLING_ID}
-    # ...    ${resposta.json()['dados']['fuellingId']}
-    Escrever no JSON    
-    ...    file_name=${arquivo_json}    key=fuellingId    value=${resposta.json()}[dados][fuellingId]
+    Set Global Variable    ${FUELLING_ID}
+    ...    ${resposta.json()['dados']['fuellingId']}
     
     Log    ${resposta.json()}    
     Status Should Be    200

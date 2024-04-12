@@ -25,9 +25,9 @@ Criar sessão para autorizar o abastecimento
     ...    headers=${headers}
     
 Inserir um fuellingID válido
-    ${json}    Pegar Valor JSON    file_name=${arquivo_json}
+    # ${json}    Pegar Valor JSON    file_name=${arquivo_json}
     ${body}    Create Dictionary    
-    ...    fuellingId=${json['fuellingId']}   
+    ...    fuellingId=${FUELLING_ID}      
     ...    produtoTelemetria=true
 
     Criar sessão para autorizar o abastecimento
