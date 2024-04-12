@@ -6,11 +6,11 @@ Library          Collections
 Library          JSONLibrary
 Library          Process
 Library          OperatingSystem
-Library          ../resources/API/factories/abastecimento.py
-Resource         ../resources/API/factories/login_aws_hml.robot
-Resource         ../resources/API/commons.robot
+Library          ../resources/factories/abastecimento.py
+Resource         ../resources/login_aws_hml.robot
+Resource         ../resources/commons.robot
 
-Variables        ../resources/API/factories/abastecimento.py
+Variables        ../resources/factories/abastecimento.py
 
 
 *** Keywords ***

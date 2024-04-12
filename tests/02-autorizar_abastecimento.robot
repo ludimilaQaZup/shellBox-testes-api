@@ -1,5 +1,5 @@
 *** Settings ***
-Resource    ../resources/API/factories/autorizacao_abastecimento.robot
+Resource    ../resources/autorizacao_abastecimento.robot
 
 *** Test Cases ***
 Realizar autorizacao do abastecimento
