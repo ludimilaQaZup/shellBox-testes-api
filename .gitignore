@@ -1,0 +1,10 @@
+.venv/
+.idea
+results
+*.pyc
+**/.DS_Store
+*.xml
+.vscode
+data/**
+massas.yaml
+*.env
